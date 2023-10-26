@@ -64,7 +64,7 @@ export function HipForm({ chainOfThought, demoData }: HipForm) {
   return (
     <div className="grid grid-cols-2 gap-6">
       <div>
-        <Form form={form} onSubmit={handleSubmit} />
+        <Form form={form} onSubmit={handleSubmit} isLoading={isLoading} />
       </div>
 
       <div>
@@ -95,8 +95,9 @@ export function HipForm({ chainOfThought, demoData }: HipForm) {
 type FormProps = {
   form: FormType
   onSubmit: (event: React.FormEvent<HTMLFormElement>) => void
+  isLoading: boolean
 }
-function Form({ form, onSubmit }: FormProps) {
+function Form({ form, onSubmit, isLoading }: FormProps) {
   return (
     <form className="my-6" onSubmit={onSubmit}>
       <Textarea
@@ -144,8 +145,9 @@ function Form({ form, onSubmit }: FormProps) {
 
       <div className="grid place-content-center mt-6">
         <button
+          disabled={isLoading}
           type="submit"
-          className="text-white bg-blue-700 hover:bg-blue-800 rounded-full px-5 py-2.5"
+          className="text-white bg-blue-700 hover:bg-blue-800 rounded-full px-5 py-2.5 disabled:bg-gray-400"
         >
           Analyze input
         </button>
