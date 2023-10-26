@@ -1,5 +1,7 @@
+import { config } from '@/config'
+
 export function analyze<T>(data: any) {
-  return fetch('http://localhost:8000/analyze', {
+  return fetch(`${config.apiUrl}/analyze`, {
     method: 'post',
     headers: {
       'Content-Type': 'application/json',

@@ -1,3 +1,4 @@
+import { config } from '@/config'
 import { HipForm } from './form'
 
 type BaseDataResponse = {
@@ -21,7 +22,7 @@ function mapBaseData(data: BaseDataResponse) {
 }
 
 async function getBaseData() {
-  const res = await fetch('http://127.0.0.1:8000/base-data')
+  const res = await fetch(`${config.apiUrl}/base-data`)
   const data = await res.json()
   return mapBaseData(data)
 }
