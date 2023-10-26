@@ -24,16 +24,17 @@ Welcome to the [Hippocratic AI](https://www.hippocraticai.com) coding assignment
 ### Run the server (API)
 
 1. In the root folder, execute `uvicorn server:app --reload`
-2. Open [http://localhost:8000](http://localhost:8000) to see the API
+2. Open [http://127.0.0.1:8000](http://127.0.0.1:8000) to see the API
 
 ### Run the app (UI)
 
 Keep the server running in another tab, it's needed for the app in order to work properly.
 
 1. Use the terminal and go to: `cd app/`
-2. Install the npm libraries: `npm install`
-3. Run the NextJS server: `npm run dev`
-4. Open [http://localhost:3000](http://localhost:3000) to see the Web App
+2. Make a copy of `.env.example` and rename the copy to `.env` (the defined env vars work locally)
+3. Install the npm libraries: `npm install`
+4. Run the NextJS server: `npm run dev`
+5. Open [http://localhost:3000](http://localhost:3000) to see the Web App
 
 ![](images/app.png?raw=true)
 
