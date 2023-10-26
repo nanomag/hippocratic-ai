@@ -2,6 +2,50 @@
 
 Welcome to the [Hippocratic AI](https://www.hippocraticai.com) coding assignment
 
+---
+
+## Getting started
+
+### Create enviroment variables
+
+1. In the root folder, create a `.env` file
+2. Add `OPENAI_API_KEY=` (use `.env.example` as reference)
+
+### Install python packages
+
+1. In the root folder, create a virtual environment: `python3 -m venv venv`
+2. Activate the virtual env: `source venv/bin/activate`
+3. Install the python packages: `pip install -r requirements.txt`
+
+### Run the core (CLI)
+
+1. In the root folder, execute `python3 testbench.py`
+
+### Run the server (API)
+
+1. In the root folder, execute `uvicorn server:app --reload`
+2. Open [http://localhost:8000](http://localhost:8000) to see the API
+
+### Run the app (UI)
+
+Keep the server running in another tab, it's needed for the app in order to work properly.
+
+1. Use the terminal and go to: `cd app/`
+2. Install the npm libraries: `npm install`
+3. Run the NextJS server: `npm run dev`
+4. Open [http://localhost:3000](http://localhost:3000) to see the Web App
+
+![](images/app.png?raw=true)
+
+## New things included
+
+1. Updated the prompting to improve the scoring. **Original:** `2/20`. **New:** `15/20`.
+2. Updated the core logic of `hip_agent.py`. Distributed the tasks/responsibilities in specific classes
+3. Created a server with FastAPI
+4. Created a web app with NextJS. The app uses server components and client components
+
+---
+
 ## Instructions
 
 The attached code is a simple multiple-choice question taker. We have included sample questions. Your goal is to make this code "better"
